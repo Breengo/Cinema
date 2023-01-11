@@ -14,6 +14,16 @@
 - PostgreSQL + sequelize
 - Docker
 
+## How to start app:
+Enter to root directory and write this commands in terminal:
+```
+docker-compose build
+docker-compose up
+```
+After this actions you need to stop app pressing `CTRL+C` and then write in terminal:
+```
+docker-compose up
+```
 ## Functional:
 
 ### General:
