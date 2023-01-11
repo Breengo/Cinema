@@ -1,0 +1,68 @@
+@media(max-width:1100px){
+    .user_profile_now {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user_profile_card {
+        padding: 3rem;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+    
+        img {
+            width: 90%;
+            height: fit-content;
+            margin: 0;
+            border-radius: 20px;
+        }
+    }
+
+    .user_profile_info {
+        text-align: left;
+        margin: 2rem 0;
+        h2 {
+            width: 35vw;
+            text-align: left;
+        }
+    
+        h3 {
+            width: 100%;
+        }
+    }
+    
+}
+
+@media(max-width:900px){
+    .user_profile_functions{
+        button{
+            margin-top:1rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media(max-width:600px){
+
+    .user_profile_card {
+        margin-top: 3rem;
+        padding: 1rem;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    
+        img {
+            width: 90%;
+            height: fit-content;
+            margin: 0;
+            border-radius: 20px;
+        }
+    }
+    .user_profile_functions{
+        button{
+            margin-top:1rem;
+            font-size: 1rem;
+        }
+    }
+}

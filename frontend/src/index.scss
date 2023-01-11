@@ -1,0 +1,73 @@
+@import './fonts.scss';
+
+@import './components//MainPage/MainPageStyles.scss';
+@import './components/Navbar/NavbarStyles.scss';
+@import './components/Header/Header.scss';
+@import './components/GenreSection/GenreSection.scss';
+@import './components/PopularFilms/PopularFilms.scss';
+@import './components/Footer/Footer.scss';
+@import './components/Authorization/Authorization.scss';
+@import './components/SearchLine/SearchLine.scss';
+@import './components/UserProfile/UserProfile.scss';
+@import './components/AddContent/AddContent.scss';
+@import './components/FilmDetails/FilmDetails.scss';
+@import './components/ChoicedGenre/ChoicedGenre.scss';
+@import './components/Navbar/mediaQueries.scss';
+@import './components/Header/mediadQueries.scss';
+@import './components/GenreSection/MediaQueries.scss';
+@import './components/PopularFilms/MediaQueries.scss';
+@import './components/Authorization/MediaQueries.scss';
+@import './components/SearchLine/MediaQueries.scss';
+@import './components/UserProfile/MediaQueries.scss';
+@import './components/ChoicedGenre/MediaQueries.scss';
+@import './components/FilmDetails/MediaQueries.scss';
+@import './components/Registration/Registration.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainBackground {
+  background-color: rgb(28, 28, 29);
+  min-height: 84.7vh;
+  margin-top: 100px;
+  padding-top: 2rem;
+  color: white;
+  overflow: hidden;
+  font-family: $fontFam;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar {
+  height: 30%;
+  background-color: rgb(28, 28, 29);
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 82, 82);
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(180, 180, 180);
+}
+
+.wraper {
+  width: inherit;
+  display: inherit;
+}

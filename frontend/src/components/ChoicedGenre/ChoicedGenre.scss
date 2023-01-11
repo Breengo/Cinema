@@ -1,0 +1,31 @@
+.choiced_genre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-size: 5rem;
+        font-family: $fontFam7;
+        text-align: center;
+        letter-spacing: 0.2rem;
+        animation: neonize2 infinite alternate 1s linear;
+        text-transform:uppercase;
+    }
+}
+
+@keyframes neonize2{
+    from{
+        text-shadow: 0 0 2px white,
+         0 0 4px white,
+         0 0 10px silver,
+         0 0 16px silver,
+         0 0 25px silver;
+    }
+
+    to{
+        text-shadow: 0 0 1px white,
+        0 0 2px white,
+        0 0 5px silver,
+        0 0 8px silver,
+        0 0 12px silver;
+    }
+}

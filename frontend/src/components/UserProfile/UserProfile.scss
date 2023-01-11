@@ -1,0 +1,62 @@
+.user_profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.user_profile_card {
+    padding: 3rem;
+    animation: neonize4 1s linear alternate infinite;
+    border-radius: 30px;
+    width: 50vw;
+
+    img {
+        margin: 0 3rem 3rem 0;
+        height: 200px;
+        border-radius: 30px;
+        animation: neonize4 1s linear alternate infinite;
+    }
+}
+
+.user_profile_now {
+    display: flex;
+}
+
+.user_profile_info {
+    margin: 2rem 0 2rem 2rem;
+    text-shadow: 0 0 15px black;
+    animation: neonize3 1s linear alternate infinite;
+
+    h2 {
+        font-size: 4rem;
+        letter-spacing: 0.1rem;
+        color:rgb(102, 50, 199);
+    }
+
+    h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        color: rgb(162, 121, 238);
+    }
+}
+
+.user_profile_functions{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    a{
+        width: 100%;
+    }
+    button{
+        margin-top: 2rem;
+        animation: neonize4 1s linear alternate infinite;
+        width: 100%;
+        background-color: blueviolet;
+        &:hover{
+            background-color: rgb(82, 6, 153);
+        }
+    }
+}

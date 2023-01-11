@@ -1,0 +1,153 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .headerImg {
+        z-index: 1;
+        width: 75vw;
+        border-radius: 30px;
+        z-index: 1;
+        transition: 0.1s;
+        border-radius: 30px;
+        margin: 0 0.5rem;
+        box-shadow: 0 0 5px rgb(42, 81, 189), 0 0 20px rgb(42, 81, 189), inset 0 0 5px rgb(42, 81, 189), inset 0 0 20px rgb(42, 81, 189);
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    a{
+        position: relative;
+        color: white;
+        opacity: 1;
+    }
+}
+
+
+.header_sideArrows {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 10%;
+    align-items: center;
+
+    img {
+        height: 20%;
+        filter: invert(1);
+        box-shadow: none;
+        opacity: 0.7;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        img {
+            opacity: 1;
+        }
+    }
+
+}
+
+.header_left_side_arrow {
+    display: flex;
+    justify-content: flex-end;
+    left: 0;
+
+    img {
+        position: absolute;
+        left: 20%;
+        top: 40%;
+        rotate: 180deg;
+    }
+
+    &:hover {
+        background: linear-gradient(270deg, rgba(28, 28, 29, 0) 0%, rgba(28, 28, 29, 0.5) 100%);
+    }
+}
+
+.header_right_side_arrow {
+    right: 0;
+
+    img {
+        position: absolute;
+        right: 20%;
+        top: 40%;
+    }
+
+    &:hover {
+        background: linear-gradient(90deg, rgba(28, 28, 29, 0) 0%, rgba(28, 28, 29, 0.5) 100%);
+    }
+}
+
+.slideLeft {
+    animation-name: slideLeft;
+    animation-duration: 1.5s;
+
+    @keyframes slideLeft {
+        from {
+            transform: translate(0);
+        }
+
+        to {
+            transform: translate(75.7vw);
+        }
+    }
+}
+
+.slideRight {
+    animation-name: slideRight;
+    animation-duration: 1.5s;
+
+    @keyframes slideRight {
+        from {
+            transform: translate(0);
+        }
+
+        to {
+            transform: translate(-75.7vw);
+        }
+    }
+}
+
+.bannerInfo{
+    position: absolute;
+    z-index: 3;
+    top: 65%;
+    left: 5%;
+    font-family: $fontFam;
+    &:hover{
+        cursor: pointer;
+    }
+
+    h2{
+        margin-bottom: 1rem;
+        font-size: 5vw
+    }
+
+    h3{
+        width: 90%;
+        font-size: 1.5vw;
+    }
+
+}
+
+.banner_genres{
+    position: absolute;
+    z-index: 3;
+    top: 2%;
+    left: 3%;
+    list-style-type: none;
+    display: flex;
+    font-family: $fontFam;
+        li{
+            margin-left: 1rem;
+            font-size: 2vw;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+}
+

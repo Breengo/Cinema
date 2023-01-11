@@ -1,0 +1,204 @@
+.genre_section {
+    margin-top: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_title {
+    font-family: $fontFam7;
+    text-align: center;
+    letter-spacing: 0.3em;
+    z-index: 1;
+
+    span {
+        animation: titleAnimation 1.5s linear infinite;
+        font-size: 5vw;
+    }
+
+    span:nth-child(1) {
+        animation-delay: .25s;
+    }
+
+    span:nth-child(3) {
+        animation-delay: .30s;
+    }
+
+    span:nth-child(4) {
+        animation-delay: .45s;
+    }
+
+    span:nth-child(5) {
+        animation-delay: .35s;
+    }
+}
+
+.section_title_genreSection {
+    text-shadow: 0 0 10px rgb(207, 66, 137), 0 0 30px rgb(207, 66, 137), 0 0 50px rgb(207, 66, 137), 0 0 70px rgb(207, 66, 137);
+    color: white;
+}
+
+.animateTitle_genreSection {
+    box-shadow: 0 0 10px rgb(207, 66, 137), 0 0 30px rgb(207, 66, 137), inset 0 0 10px rgb(207, 66, 137), inset 0 0 30px rgb(207, 66, 137);
+    animation: titleAnimation .3s linear infinite;
+}
+
+.animateTitle {
+    position: relative;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 1.5em 2em;
+    width: 25%;
+    margin: 3rem;
+}
+
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0%;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+
+.genre_container {
+    width: 22%;
+    min-width: 300px;
+    user-select: none;
+    box-shadow: 0 0 2px white,
+        0 0 4px white,
+        0 0 10px rgb(252, 97, 143),
+        0 0 16px rgb(252, 97, 143),
+        0 0 25px rgb(252, 97, 143);
+    padding: 0;
+    margin: 20px;
+    border-radius: 15px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgb(73, 73, 216) 10%, rgb(204, 23, 23) 100%);
+    animation: genreAnim 1.5s ease-in-out infinite alternate;
+
+    h3 {
+        font-size: 3rem;
+        font-family: $fontFam7;
+    }
+
+    opacity: 0.7;
+
+    &:hover {
+        cursor: pointer;
+        animation-play-state: paused;
+        opacity: 1;
+        text-shadow: 0 0 5px white;
+    }
+}
+
+@keyframes genreAnim {
+    from {
+        transform: translate(0, 10px);
+    }
+
+    to {
+        transform: translate(0, -10px);
+    }
+}
+
+
+.genre_section_boxes {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top:20%;
+    transition: 1s ease-in-out;
+
+    :nth-child(odd),
+    :nth-child(even) {
+        h3 {
+            background: transparent;
+        }
+
+    }
+
+    :nth-child(1) {
+        animation-delay: .25s;
+        background: url("./images/action.png") center center/cover;
+    }
+
+    :nth-child(2) {
+        animation-delay: .55s;
+        background: url("./images/comedy.jpg") center center/cover;
+    }
+
+    :nth-child(3) {
+        animation-delay: .50s;
+        background: url("./images/drama.jpg") center center/cover;
+    }
+
+    :nth-child(4) {
+        animation-delay: .60s;
+        background: url("./images/fantasy.jpg") center center/cover;
+    }
+
+    :nth-child(5) {
+        animation-delay: .35s;
+        background: url("./images/horror.jpg") center/cover;
+    }
+
+    :nth-child(6) {
+        animation-delay: .50s;
+        background: url("./images/mystic.jpg") center/cover;
+    }
+
+    :nth-child(7) {
+        animation-delay: .30s;
+        background: url("./images/romance.jpg") center/cover;
+    }
+
+    :nth-child(8) {
+        animation-delay: .40s;
+        background: url("./images/thriller.jpg") center/cover;
+    }
+
+    :nth-child(9) {
+        animation-delay: .30s;
+        background: url("./images/western.jpeg") center/cover;
+    }
+
+    :nth-child(10) {
+        animation-delay: .40s;
+        background: url("./images/sci-fi.webp") center/cover;
+    }
+
+    :nth-child(11) {
+        animation-delay: .40s;
+        background: url("./images/history.jpg") center/cover;
+    }
+
+
+
+
+}

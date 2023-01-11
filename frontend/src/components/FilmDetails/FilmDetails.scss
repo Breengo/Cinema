@@ -1,0 +1,256 @@
+.film_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.film_details_up {
+  display: flex;
+  width: 70vw;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.film_details_text {
+  margin: 0rem 1rem;
+  p {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-family: $fontFam3;
+    span {
+      margin-left: 1rem;
+      font-family: $numberFont3;
+      font-size: 2rem;
+    }
+  }
+  ul {
+    flex-wrap: wrap;
+  }
+}
+
+.film_details_preview {
+  height: 400px;
+  border-radius: 10px;
+}
+
+.film_details_description {
+  width: 70%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family: $fontFam;
+}
+
+.film_details_genreList {
+  display: flex;
+  align-items: center;
+}
+
+.film_details_video {
+  height: 500px;
+  border-radius: 15px;
+  margin-top: 5rem;
+}
+
+.film_details_genres {
+  display: flex;
+  list-style-type: none;
+  li {
+    margin-top: 0.3rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.film_details_filmName {
+  margin-top: 2rem;
+  font-size: 5rem;
+}
+
+.film_details_raiting {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  animation: neonize7 linear alternate infinite 1s;
+  span {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    font-family: $numberFont4;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+  }
+}
+
+@keyframes neonize7 {
+  from {
+    text-shadow: 0 0 2px white, 0 0 4px white, 0 0 10px gold, 0 0 16px gold, 0 0 25px gold;
+  }
+
+  to {
+    text-shadow: 0 0 1px white, 0 0 2px white, 0 0 5px gold, 0 0 8px gold, 0 0 12px gold;
+  }
+}
+
+.film_details_stars {
+  button {
+    cursor: pointer;
+    z-index: 2000;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.film_details_description {
+  font-family: $fontFam;
+  line-height: 1.6rem;
+  letter-spacing: 0.05rem;
+}
+
+.star {
+  color: rgba(231, 168, 33, 0.26);
+}
+
+.film_details_raited {
+  color: rgb(231, 168, 33);
+}
+
+.film_details_comment {
+  margin-top: 3rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 60%;
+
+  button {
+    margin: 1rem 0rem;
+    padding: 0.5rem 3rem;
+    border-radius: 5px;
+    font-family: $fontFam5;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    background-color: rgb(33, 177, 33);
+    &:hover {
+      cursor: pointer;
+      scale: 0.95;
+      background-color: rgb(43, 224, 43);
+      color: gainsboro;
+    }
+  }
+}
+
+.film_details_commentTextInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  textarea {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+    font-family: $fontFam1;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    border: 1px solid rgb(175, 173, 173);
+    &:focus {
+      border: 1px solid rgb(47, 88, 226);
+    }
+  }
+}
+
+.film_details_commentsBlock {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin-left: 24%;
+  justify-content: center;
+}
+
+.user_comment_box {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 68%;
+  margin: 1rem;
+  img {
+    height: 96px;
+    width: 96px;
+    border-radius: 48px;
+    animation: neonize8 1s linear infinite alternate;
+  }
+}
+
+@keyframes neonize8 {
+  from {
+    box-shadow: 0 0 2px white, 0 0 4px white, 0 0 10px rgb(231, 22, 85), 0 0 16px rgb(231, 22, 85),
+      0 0 25px rgb(231, 22, 85);
+  }
+  to {
+    box-shadow: 0 0 4px white, 0 0 8px white, 0 0 20px rgb(231, 22, 85), 0 0 32px rgb(231, 22, 85),
+      0 0 50px rgb(231, 22, 85);
+  }
+}
+
+.user_comment_text {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 1rem;
+  box-shadow: 0 0 2px white, 0 0 4px white, 0 0 10px rgb(231, 22, 85), 0 0 16px rgb(231, 22, 85),
+    0 0 25px rgb(231, 22, 85);
+  border-radius: 10px;
+  padding: 2% 2% 3% 2%;
+  h3 {
+    color: pink;
+    font-size: 3rem;
+    animation: neonize6 1s alternate infinite linear;
+    letter-spacing: 0.1rem;
+  }
+  p {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 2px white;
+  }
+  span {
+    position: absolute;
+    font-size: 1.5rem;
+    font-family: $numberFont4;
+    right: 3%;
+    bottom: 3%;
+    color: rgb(155, 151, 151);
+  }
+}
+
+.film_details_delete {
+  color: red;
+  border: 1px solid red;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  justify-self: center;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(233, 19, 19, 0.74);
+    color: white;
+  }
+}
+
+.film_details_deleteWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,61 @@
+@media(max-width:900px){
+    .searchBox{
+        width: 28vw;
+    }
+    .search_line_inputBox {
+        input{
+            width: 50vw;
+        }
+    }
+
+    .search_line {
+        left:20%;
+        z-index: 100;
+    }
+}
+
+@media(max-width:600px){
+    .searchBox{
+        width: 40vw;
+    }
+    .search_line_inputBox {
+        input{
+            width: 80vw;
+        }
+    }
+
+    .search_line {
+        left:5%;
+        z-index: 100;
+    }
+
+    .closeSearch {
+        right: 2%;
+        top: 1%;
+        height: 32px;
+    }
+    
+}
+
+@media(max-width:600px){
+    .searchBox{
+        width: 40vw;
+    }
+    .search_line_inputBox {
+        input{
+            width: 72vw;
+        }
+    }
+
+    .search_line {
+        left:5%;
+        z-index: 100;
+    }
+
+    .closeSearch {
+        right: 2%;
+        top: 1%;
+        height: 32px;
+    }
+    
+}

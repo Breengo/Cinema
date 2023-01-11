@@ -1,0 +1,213 @@
+.search_line {
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    z-index: 100;
+}
+
+.search_line_inputBox {
+    box-shadow: 0 0 2px white,
+        0 0 4px white,
+        0 0 10px rgb(231, 22, 85),
+        0 0 16px rgb(231, 22, 85),
+        0 0 25px rgb(231, 22, 85);
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(231, 22, 85, 0.199), #2c4de01c);
+    border-radius: 15px;
+
+    img {
+        height: 32px;
+        margin: 0 1rem;
+        opacity: 0.7;
+    }
+
+    input {
+        padding: 0.5rem;
+        width: 30vw;
+        outline: none;
+        border: none;
+        font-family: $fontFam5;
+        font-size: 1.5rem;
+        background-color: transparent;
+        color: white;
+
+        &:focus~img {
+            opacity: 1;
+            scale: 1.1;
+        }
+    }
+}
+
+.search_line__searched_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 15%;
+    width: 100%;
+
+
+}
+
+.closeSearch {
+    position: absolute;
+    right: 5%;
+    top: 6%;
+    height: 48px;
+    transform: rotate(180deg);
+    opacity: 0.8;
+
+    box-shadow: 0 0 2px white,
+        0 0 4px white,
+        0 0 10px rgb(231, 22, 85),
+        0 0 16px rgb(231, 22, 85),
+        0 0 25px rgb(231, 22, 85);
+    border-radius: 100px;
+    padding: 0;
+    background-color: rgb(231, 22, 85);
+
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+        scale: 1.1;
+    }
+}
+
+
+.searchBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: $fontFam;
+    width: 23vw;
+    border-radius: 10px;
+    margin: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 2px white,
+        0 0 4px white,
+        0 0 10px rgb(231, 22, 85),
+        0 0 16px rgb(231, 22, 85),
+        0 0 25px rgb(231, 22, 85);
+
+    &:hover {
+        cursor: pointer;
+
+        .searchBox__filmName {
+            opacity: 0;
+        }
+
+        img {
+            scale: 1.2;
+            opacity: 0.7;
+        }
+
+        .searchBox_filmDescription {
+            opacity: 1;
+        }
+
+        .searchBox_filmType {
+            opacity: 1;
+        }
+
+        .searchBox_filmGenres {
+            opacity: 1;
+        }
+
+        .searchBox_filmDuration {
+            opacity: 1;
+        }
+
+    }
+
+    @keyframes neonize6 {
+        from {
+            text-shadow: 0 0 2px white,
+                0 0 4px white,
+                0 0 10px rgb(231, 22, 85),
+                0 0 16px rgb(231, 22, 85),
+                0 0 25px rgb(231, 22, 85);
+        }
+
+        to {
+            text-shadow: 0 0 1px white,
+                0 0 2px white,
+                0 0 5px rgb(231, 22, 85),
+                0 0 8px rgb(231, 22, 85),
+                0 0 12px rgb(231, 22, 85);
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+}
+
+.searchBox__filmName {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    font-size: 3rem;
+    opacity: 1;
+    animation: neonize6 1s alternate infinite linear;
+}
+
+.searchBox_filmDescription {
+    animation: neonize6 1s alternate infinite linear;
+    position: absolute;
+    top: 10%;
+    width: 90%;
+    left: 5%;
+    font-size: 1.3rem;
+    opacity: 0;
+}
+
+.searchBox_filmType {
+    animation: neonize6 1s alternate infinite linear;
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    opacity: 0;
+    font-size: 1.5rem;
+    font-family: $fontFam6;
+    letter-spacing: 0.1rem;
+}
+
+.searchBox_filmGenres {
+    animation: neonize6 1s alternate infinite linear;
+    display: flex;
+    position: absolute;
+    list-style-type: none;
+    bottom: 5%;
+    left: 5%;
+    opacity: 0;
+
+    li {
+        margin-right: 0.5rem;
+        font-size: 1.3rem;
+        font-family: $fontFam6;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.searchBox_filmDuration {
+    animation: neonize6 1s alternate infinite linear;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    opacity: 0;
+    font-size: 1.5rem;
+    font-family: $fontFam6;
+    letter-spacing: 0.1rem;
+}

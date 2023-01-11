@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=password123
+      - POSTGRES_DB=Cinema
+    ports:
+      - 5432:5432
+    networks:
+      - shared-network
+    volumes:
+      - ./postgres-db:/var/lib/postgresql/data
+
+  server:
+    container_name: server
+    image: server
+    restart: unless-stopped
+    environment:
+      - PORT=4000
+      - DB_NAME=Cinema
+      - DB_USER=postgres
+      - DB_PASSWORD=password123
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - SECRET_KEY=mega_super_secret_key
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+    networks:
+      - shared-network
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend:/static
+
+  client:
+    image: client
+    restart: unless-stopped
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - shared-network
+    depends_on:
+      - server
+
+networks:
+  shared-network:
+volumes:
+  static:

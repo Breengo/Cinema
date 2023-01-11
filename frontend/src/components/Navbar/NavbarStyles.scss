@@ -1,0 +1,221 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    background-color: rgb(28, 28, 29);
+    color: rgb(163, 163, 163);
+    font-family: $fontFam7;
+    box-shadow: 2px 2px 15px 1px rgb(82, 82, 82);
+    z-index: 50;
+}
+
+.logo {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    h1 {
+        font-family: $fontFam7;
+        letter-spacing: 0.5rem;
+        animation: neonize 1s ease-in-out infinite alternate;
+        font-weight: bold;
+        font-size: 4rem;
+        color: rgb(204, 82, 82);
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.nav_user_profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+        height: 28px;
+        margin-bottom: 5px;
+        margin-right: 0.3rem;
+        opacity: 0.6;
+    }
+}
+
+.navbar_category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+
+        a{
+            margin: 1rem;
+            font-size: 2.5rem;
+            &:hover{
+                color: rgb(235, 45, 70);
+                cursor: pointer;
+                text-shadow: 0 0 15px rgb(235, 45, 70), 0 0 30px rgb(235, 45, 70),0 0 45px rgb(235, 45, 70);
+            }
+        }
+    }
+}
+
+.search_input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    img{
+        height: 24px;
+        margin-bottom: 5px;
+        margin-right: 0.3rem;
+        opacity: 0.6;
+    }
+
+    input {
+        padding: 1rem 3rem;
+    }
+}
+
+.hover_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        color: rgb(235, 45, 70);
+        cursor: pointer;
+        text-shadow: 0 0 15px rgb(235, 45, 70), 0 0 30px rgb(235, 45, 70),0 0 45px rgb(235, 45, 70);
+
+        img{
+            opacity: 1;
+            filter: invert(0);
+        }
+    }
+}
+
+
+@keyframes neonize{
+    from{
+        text-shadow: 0 0 2px white,
+         0 0 4px white,
+         0 0 10px rgb(235, 45, 70),
+         0 0 16px rgb(235, 45, 70),
+         0 0 25px rgb(235, 45, 70);
+    }
+
+    to{
+        text-shadow: 0 0 1px white,
+        0 0 2px white,
+        0 0 5px rgb(235, 45, 70),
+        0 0 8px rgb(235, 45, 70),
+        0 0 12px rgb(235, 45, 70);
+    }
+}
+
+.navbar_user_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $fontFam7;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    color: white;
+    animation: neonize3 1s linear alternate infinite;
+    letter-spacing: 0.1rem;
+    img{
+        height: 50px;
+        border-radius: 50px;
+        margin-right: 1rem;
+        animation: neonize4 1s linear alternate infinite;
+    }
+    &:hover{
+        cursor: pointer;
+        scale: 1.1;
+    }
+}
+
+.scale1{
+    scale: 1.1;
+}
+
+@keyframes neonize3{
+    from{
+        text-shadow: 0 0 2px white,
+         0 0 4px white,
+         0 0 10px blueviolet,
+         0 0 16px blueviolet,
+         0 0 25px blueviolet;
+    }
+
+    to{
+        text-shadow: 0 0 1px white,
+        0 0 2px white,
+        0 0 5px blueviolet,
+        0 0 8px blueviolet,
+        0 0 12px blueviolet;
+    }
+}
+
+@keyframes neonize4{
+    from{
+        box-shadow: 0 0 2px white,
+         0 0 4px white,
+         0 0 10px blueviolet,
+         0 0 16px blueviolet,
+         0 0 25px blueviolet;
+    }
+
+    to{
+        box-shadow: 0 0 1px white,
+        0 0 2px white,
+        0 0 5px blueviolet,
+        0 0 8px blueviolet,
+        0 0 12px blueviolet;
+    }
+}
+
+.navbar_userProfile_clickMenu{
+    position: absolute;
+    top: 0;
+    background-color:rgb(28, 28, 29);
+    border-radius: 10px;
+    color: rgb(180, 180, 180);
+    box-shadow: 2px 2px 15px 1px rgb(49, 49, 49);
+    z-index: -1;
+    transition: 0.3s;
+    scale: 1.1;
+    ul{
+        margin-top: 6.6rem;
+        padding: 1rem 3.5rem 0rem 3.5rem;
+        list-style-type: none;
+        border-top:1px solid rgb(37, 37, 37);
+        li{
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+            letter-spacing: 0.05rem;
+            font-family: $fontFam6;
+
+            &:hover{
+                cursor: pointer;
+                scale: 1.1;
+                color: white;
+            }
+        }
+    }
+}
+
+.hide_userProfile_clickMenu{
+    transform: translate(0px,-100px);
+    opacity: 0;
+    box-shadow: none;
+    ul{
+        opacity: 0;
+    }
+}

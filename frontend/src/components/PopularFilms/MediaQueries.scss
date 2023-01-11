@@ -1,0 +1,49 @@
+@media(max-width:1200px){
+    .PopFilms_mainSection {
+        a{
+            min-width: 48%;
+        }
+    }
+
+    .filmPreview {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:900px){
+    .film_box{
+        margin: 1rem;
+    }
+    .PopFilms_mainSection {
+        a{
+            min-width: 48%;
+        }
+    }
+
+    .filmPreview {
+        img {
+            width: 100%;
+            min-height: 150px;
+        }
+    }
+}
+
+@media(max-width:900px){
+    .film_box{
+        margin: 1rem;
+    }
+    .PopFilms_mainSection {
+        a{
+            min-width: 96%;
+        }
+    }
+
+    .filmPreview {
+        img {
+            width: 100%;
+            min-height: 150px;
+        }
+    }
+}
