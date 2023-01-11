@@ -20,7 +20,7 @@ Enter to root directory and write this commands in terminal:
 docker-compose build
 docker-compose up
 ```
-After this actions you need to stop app pressing `CTRL+C` and then write in terminal:
+During the first launch, due to the fact that the database has not been created, there will be an error, so you need to stop the application with `CTR+C` and restart it with the following command:
 ```
 docker-compose up
 ```
